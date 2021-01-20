@@ -4,12 +4,6 @@ import googlemaps
 import config
 
 
-
-
-
-
-ADDRESS = "4 Nassau St, Princeton, NJ"
-
 def addressToTract(address):
     key = config.googlemapsapikey
     
@@ -42,7 +36,5 @@ def addressToTract(address):
     
     return tract
 
-
-tract = addressToTract(ADDRESS)
 
 
