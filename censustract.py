@@ -3,7 +3,7 @@ import requests
 import googlemaps
 import config
 
-KEY = config.googlemapsapikey
+
 
 
 
@@ -11,11 +11,11 @@ KEY = config.googlemapsapikey
 ADDRESS = "4 Nassau St, Princeton, NJ"
 
 def addressToTract(address):
-    
+    key = config.googlemapsapikey
     
     #gets coordinates using google maps API
     #google bills me if more than 40,000 requests/month
-    gmaps = googlemaps.Client(key = KEY)
+    gmaps = googlemaps.Client(key = key)
     result = gmaps.geocode(ADDRESS)[0].get("geometry").get("location")
     lat = str(result.get("lat"))
     long = str(result.get("lng"))
