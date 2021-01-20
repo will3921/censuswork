@@ -10,7 +10,7 @@ def addressToTract(address):
     #gets coordinates using google maps API
     #google bills me if more than 40,000 requests/month
     gmaps = googlemaps.Client(key = key)
-    result = gmaps.geocode(ADDRESS)[0].get("geometry").get("location")
+    result = gmaps.geocode(address)[0].get("geometry").get("location")
     lat = str(result.get("lat"))
     long = str(result.get("lng"))
     
